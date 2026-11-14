@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>agent-skills — Reusable Agent Skills for AI coding agents</title>
+  <meta name="description" content="A collection of reusable Agent Skills (SKILL.md) for AI coding agents such as Claude Code: repository analysis, commit messages, landing pages, CI/CD modernization, security audits, and more.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://hidao80.github.io/agent-skills/">
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f9f0.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="agent-skills">
+  <meta property="og:title" content="agent-skills — Reusable Agent Skills for AI coding agents">
+  <meta property="og:description" content="A collection of reusable Agent Skills (SKILL.md) for AI coding agents such as Claude Code.">
+  <meta property="og:url" content="https://hidao80.github.io/agent-skills/">
+  <meta property="og:image" content="https://hidao80.github.io/agent-skills/social-preview.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="agent-skills — Reusable Agent Skills for AI coding agents">
+  <meta name="twitter:description" content="A collection of reusable Agent Skills (SKILL.md) for AI coding agents such as Claude Code.">
+  <meta name="twitter:image" content="https://hidao80.github.io/agent-skills/social-preview.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "agent-skills",
+    "description": "A collection of reusable Agent Skills (SKILL.md) for AI coding agents such as Claude Code.",
+    "url": "https://hidao80.github.io/agent-skills/",
+    "sameAs": "https://github.com/hidao80/agent-skills",
+    "image": "https://hidao80.github.io/agent-skills/social-preview.png",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "license": "https://opensource.org/licenses/MIT",
+    "author": { "@type": "Person", "name": "hidao80", "url": "https://github.com/hidao80" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/multilanguagejs@2.0.1/dist/multilanguagejs.umd.cjs"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f9f0.svg" alt="" width="28" height="28">
+        <span>agent-skills</span>
+      </a>
+      <nav class="header-nav">
+        <label class="visually-hidden" for="lang-select">Language</label>
+        <select id="lang-select" class="lang-select">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh">中文</option>
+          <option value="es">Español</option>
+          <option value="ru">Русский</option>
+          <option value="de">Deutsch</option>
+        </select>
+        <a class="icon-link" href="https://github.com/hidao80/agent-skills">
+          <span class="visually-hidden">GitHub</span>
+          <svg viewBox="0 0 16 16" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">agent-skills</h1>
+        <p class="hero-tagline">
+          <template type="language-group">
+            <span language="en">Reusable Agent Skills for AI coding agents</span>
+            <span language="ja">AI コーディングエージェントのための再利用可能な Agent Skills</span>
+            <span language="zh">面向 AI 编码代理的可复用 Agent Skills</span>
+            <span language="es">Agent Skills reutilizables para agentes de programación con IA</span>
+            <span language="ru">Переиспользуемые Agent Skills для ИИ-агентов программирования</span>
+            <span language="de">Wiederverwendbare Agent Skills für KI-Coding-Agenten</span>
+          </template>
+        </p>
+        <p class="hero-lead">
+          <template type="language-group">
+            <span language="en">A collection of SKILL.md packages for Claude Code and other agents. Each skill fixes the procedure for a recurring development task — repository analysis, commit messages, landing pages, CI/CD modernization, security audits, and more.</span>
+            <span language="ja">Claude Code などのエージェント向け SKILL.md パッケージ集。リポジトリ解析、コミットメッセージ、ランディングページ、CI/CD のモダナイズ、セキュリティ監査など、繰り返し発生する開発タスクの手順を一か所に固定します。</span>
+            <span language="zh">面向 Claude Code 等代理的 SKILL.md 技能包合集。将仓库分析、提交信息、落地页、CI/CD 现代化、安全审计等重复性开发任务的流程固定下来。</span>
+            <span language="es">Una colección de paquetes SKILL.md para Claude Code y otros agentes. Cada skill fija el procedimiento de una tarea de desarrollo recurrente: análisis de repositorios, mensajes de commit, landing pages, modernización de CI/CD, auditorías de seguridad y más.</span>
+            <span language="ru">Набор пакетов SKILL.md для Claude Code и других агентов. Каждый навык фиксирует порядок действий для повторяющейся задачи разработки: анализ репозитория, сообщения коммитов, лендинги, модернизация CI/CD, аудит безопасности и многое другое.</span>
+            <span language="de">Eine Sammlung von SKILL.md-Paketen für Claude Code und andere Agenten. Jeder Skill legt das Vorgehen für eine wiederkehrende Entwicklungsaufgabe fest – Repository-Analyse, Commit-Nachrichten, Landingpages, CI/CD-Modernisierung, Sicherheitsaudits und mehr.</span>
+          </template>
+        </p>
+        <div class="code-row hero-command">
+          <code>npx skills add hidao80/agent-skills</code>
+          <button class="copy-btn" type="button" aria-label="Copy command"></button>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#quick-start">
+            <template type="language-group">
+              <span language="en">Quick Start</span>
+              <span language="ja">クイックスタート</span>
+              <span language="zh">快速开始</span>
+              <span language="es">Inicio rápido</span>
+              <span language="ru">Быстрый старт</span>
+              <span language="de">Schnellstart</span>
+            </template>
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/hidao80/agent-skills">
+            <template type="language-group">
+              <span language="en">View on GitHub</span>
+              <span language="ja">GitHub で見る</span>
+              <span language="zh">在 GitHub 上查看</span>
+              <span language="es">Ver en GitHub</span>
+              <span language="ru">Открыть на GitHub</span>
+              <span language="de">Auf GitHub ansehen</span>
+            </template>
+          </a>
+        </div>
+        <img class="hero-image" src="https://hidao80.github.io/agent-skills/social-preview.png" alt="agent-skills social preview" width="1280" height="640" loading="lazy">
+      </div>
+    </section>
+    <section class="section" id="why">
+      <div class="container">
+        <h2 class="section-title">
+          <template type="language-group">
+            <span language="en">Why agent-skills</span>
+            <span language="ja">agent-skills を使う理由</span>
+            <span language="zh">为什么选择 agent-skills</span>
+            <span language="es">Por qué agent-skills</span>
+            <span language="ru">Зачем нужен agent-skills</span>
+            <span language="de">Warum agent-skills</span>
+          </template>
+        </h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3 class="card-title">
+              <template type="language-group">
+                <span language="en">Consistent results</span>
+                <span language="ja">一貫した結果</span>
+                <span language="zh">结果一致</span>
+                <span language="es">Resultados consistentes</span>
+                <span language="ru">Стабильные результаты</span>
+                <span language="de">Konsistente Ergebnisse</span>
+              </template>
+            </h3>
+            <p>
+              <template type="language-group">
+                <span language="en">Stop rewriting the same prompt for every repository. The procedure, format, and rules live in one place.</span>
+                <span language="ja">リポジトリごとに同じ指示を書き直す必要はありません。手順・書式・ルールを一か所にまとめます。</span>
+                <span language="zh">无需为每个仓库重写相同的提示。流程、格式与规则集中在一处。</span>
+                <span language="es">Deja de reescribir el mismo prompt en cada repositorio. El procedimiento, el formato y las reglas están en un solo lugar.</span>
+                <span language="ru">Больше не нужно переписывать один и тот же промпт для каждого репозитория. Порядок, формат и правила — в одном месте.</span>
+                <span language="de">Schluss mit dem Neuschreiben desselben Prompts für jedes Repository. Ablauf, Format und Regeln liegen an einem Ort.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">
+              <template type="language-group">
+                <span language="en">Repository facts, not boilerplate</span>
+                <span language="ja">定型文ではなくリポジトリの事実</span>
+                <span language="zh">基于仓库事实，而非模板</span>
+                <span language="es">Hechos del repositorio, no plantillas</span>
+                <span language="ru">Факты репозитория, а не шаблоны</span>
+                <span language="de">Fakten aus dem Repository statt Boilerplate</span>
+              </template>
+            </h3>
+            <p>
+              <template type="language-group">
+                <span language="en">Skills derive content from the target repository — README, package manifests, workflows, git log — and never invent features or commands.</span>
+                <span language="ja">README・パッケージマニフェスト・ワークフロー・git log など対象リポジトリから内容を導き、存在しない機能やコマンドを作りません。</span>
+                <span language="zh">技能从目标仓库（README、包清单、工作流、git log）提取内容，绝不虚构功能或命令。</span>
+                <span language="es">Los skills obtienen el contenido del repositorio de destino (README, manifiestos de paquetes, workflows, git log) y nunca inventan funciones ni comandos.</span>
+                <span language="ru">Навыки берут данные из целевого репозитория — README, манифестов пакетов, workflow, git log — и никогда не выдумывают функции или команды.</span>
+                <span language="de">Skills beziehen Inhalte aus dem Ziel-Repository – README, Paketmanifeste, Workflows, git log – und erfinden niemals Funktionen oder Befehle.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">
+              <template type="language-group">
+                <span language="en">Bilingual maintenance</span>
+                <span language="ja">日英 2 言語での保守</span>
+                <span language="zh">双语维护</span>
+                <span language="es">Mantenimiento bilingüe</span>
+                <span language="ru">Двуязычная поддержка</span>
+                <span language="de">Zweisprachige Pflege</span>
+              </template>
+            </h3>
+            <p>
+              <template type="language-group">
+                <span language="en">Skills are authored in Japanese under src/ and published in English under skills/.</span>
+                <span language="ja">スキルは src/ に日本語で執筆し、skills/ に英語で公開します。</span>
+                <span language="zh">技能在 src/ 下用日语编写，并在 skills/ 下以英语发布。</span>
+                <span language="es">Los skills se escriben en japonés en src/ y se publican en inglés en skills/.</span>
+                <span language="ru">Навыки пишутся на японском в src/ и публикуются на английском в skills/.</span>
+                <span language="de">Skills werden auf Japanisch in src/ verfasst und auf Englisch in skills/ veröffentlicht.</span>
+              </template>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">
+          <template type="language-group">
+            <span language="en">Skills</span>
+            <span language="ja">スキル一覧</span>
+            <span language="zh">技能列表</span>
+            <span language="es">Skills disponibles</span>
+            <span language="ru">Навыки</span>
+            <span language="de">Enthaltene Skills</span>
+          </template>
+        </h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3 class="card-title"><code>code-analyze</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill code-analyze" aria-label="Copy install command for code-analyze" title="npx skills add hidao80/agent-skills --skill code-analyze"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Analyzes a repository and creates or refreshes structured reference docs (dependencies, infrastructure, databases, screens, security, tests, and more) under z-ai/code-analyzed/.</span>
+                <span language="ja">リポジトリを解析し、依存関係・インフラ・データベース・画面・セキュリティ・テストなどの構造化された参照ドキュメントを z-ai/code-analyzed/ 配下に作成・更新します。</span>
+                <span language="zh">分析仓库，并在 z-ai/code-analyzed/ 下创建或更新结构化参考文档（依赖、基础设施、数据库、界面、安全、测试等）。</span>
+                <span language="es">Analiza un repositorio y crea o actualiza documentación de referencia estructurada (dependencias, infraestructura, bases de datos, pantallas, seguridad, pruebas y más) en z-ai/code-analyzed/.</span>
+                <span language="ru">Анализирует репозиторий и создаёт или обновляет структурированную справочную документацию (зависимости, инфраструктура, базы данных, экраны, безопасность, тесты и др.) в z-ai/code-analyzed/.</span>
+                <span language="de">Analysiert ein Repository und erstellt oder aktualisiert strukturierte Referenzdokumente (Abhängigkeiten, Infrastruktur, Datenbanken, Screens, Sicherheit, Tests u. a.) unter z-ai/code-analyzed/.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>commit-msg</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill commit-msg" aria-label="Copy install command for commit-msg" title="npx skills add hidao80/agent-skills --skill commit-msg"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Suggests a concise commit message for the staged changes, prefixed with a gitmoji shortcode.</span>
+                <span language="ja">ステージ済みの変更に対し、gitmoji ショートコードを先頭に付けた簡潔なコミットメッセージを提案します。</span>
+                <span language="zh">为已暂存的更改建议以 gitmoji 短代码开头的简洁提交信息。</span>
+                <span language="es">Sugiere un mensaje de commit conciso para los cambios preparados, con un shortcode de gitmoji como prefijo.</span>
+                <span language="ru">Предлагает краткое сообщение коммита для проиндексированных изменений с префиксом в виде шорткода gitmoji.</span>
+                <span language="de">Schlägt eine prägnante Commit-Nachricht für die gestagten Änderungen vor, mit einem gitmoji-Shortcode als Präfix.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>update-adr</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill update-adr" aria-label="Copy install command for update-adr" title="npx skills add hidao80/agent-skills --skill update-adr"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Creates or updates Architecture Decision Records in docs/ADR.md from the committed git log.</span>
+                <span language="ja">コミット済みの git log から docs/ADR.md のアーキテクチャ決定記録（ADR）を作成・更新します。</span>
+                <span language="zh">根据已提交的 git log，在 docs/ADR.md 中创建或更新架构决策记录。</span>
+                <span language="es">Crea o actualiza registros de decisiones de arquitectura en docs/ADR.md a partir del git log confirmado.</span>
+                <span language="ru">Создаёт или обновляет записи архитектурных решений в docs/ADR.md на основе зафиксированного git log.</span>
+                <span language="de">Erstellt oder aktualisiert Architecture Decision Records in docs/ADR.md anhand des committeten git log.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>web-security-audit</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill web-security-audit" aria-label="Copy install command for web-security-audit" title="npx skills add hidao80/agent-skills --skill web-security-audit"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Statically audits a repository for external communication, data storage, third-party libraries, and other security risks, and reports findings by severity.</span>
+                <span language="ja">外部通信・データ保存・サードパーティライブラリなどのセキュリティリスクを静的に監査し、重大度順に報告します。</span>
+                <span language="zh">静态审计仓库中的外部通信、数据存储、第三方库及其他安全风险，并按严重程度报告。</span>
+                <span language="es">Audita de forma estática la comunicación externa, el almacenamiento de datos, las librerías de terceros y otros riesgos de seguridad, e informa de los hallazgos por gravedad.</span>
+                <span language="ru">Статически проверяет репозиторий на внешние соединения, хранение данных, сторонние библиотеки и другие риски безопасности и сообщает о находках по степени критичности.</span>
+                <span language="de">Prüft ein Repository statisch auf externe Kommunikation, Datenspeicherung, Drittanbieter-Bibliotheken und weitere Sicherheitsrisiken und meldet die Befunde nach Schweregrad.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>modernize-repo</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill modernize-repo" aria-label="Copy install command for modernize-repo" title="npx skills add hidao80/agent-skills --skill modernize-repo"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Modernizes JavaScript/TypeScript, Python, and PHP repositories with multi-stage Dockerfiles, GitHub Actions pinned via pinact, Playwright E2E tests, and an updated README.</span>
+                <span language="ja">JavaScript/TypeScript・Python・PHP のリポジトリを、マルチステージ Dockerfile、pinact でコミットハッシュ固定した GitHub Actions、Playwright E2E テスト、README 更新でモダナイズします。</span>
+                <span language="zh">通过多阶段 Dockerfile、经 pinact 固定的 GitHub Actions、Playwright E2E 测试以及更新后的 README，对 JavaScript/TypeScript、Python 和 PHP 仓库进行现代化改造。</span>
+                <span language="es">Moderniza repositorios JavaScript/TypeScript, Python y PHP con Dockerfiles multietapa, GitHub Actions fijadas con pinact, pruebas E2E con Playwright y un README actualizado.</span>
+                <span language="ru">Модернизирует репозитории на JavaScript/TypeScript, Python и PHP: многоэтапные Dockerfile, GitHub Actions с фиксацией через pinact, E2E-тесты Playwright и обновлённый README.</span>
+                <span language="de">Modernisiert JavaScript/TypeScript-, Python- und PHP-Repositories mit Multi-Stage-Dockerfiles, per pinact fixierten GitHub Actions, Playwright-E2E-Tests und einer aktualisierten README.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>setup-act</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill setup-act" aria-label="Copy install command for setup-act" title="npx skills add hidao80/agent-skills --skill setup-act"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Analyzes GitHub Actions workflows and generates the matching local act configuration: runner images, Docker socket, secret scaffolding, and task runner shortcuts.</span>
+                <span language="ja">GitHub Actions ワークフローを解析し、ランナーイメージ・Docker ソケット・シークレットの雛形・タスクランナーのショートカットなど、対応するローカル act の設定を生成します。</span>
+                <span language="zh">分析 GitHub Actions 工作流，并生成匹配的本地 act 配置：运行器镜像、Docker 套接字、密钥模板和任务运行器快捷方式。</span>
+                <span language="es">Analiza los workflows de GitHub Actions y genera la configuración local de act correspondiente: imágenes de runner, socket de Docker, plantilla de secretos y atajos del ejecutor de tareas.</span>
+                <span language="ru">Анализирует workflow GitHub Actions и генерирует соответствующую локальную конфигурацию act: образы раннеров, сокет Docker, заготовки секретов и ярлыки для таск-раннера.</span>
+                <span language="de">Analysiert GitHub-Actions-Workflows und erzeugt die passende lokale act-Konfiguration: Runner-Images, Docker-Socket, Secret-Gerüst und Task-Runner-Shortcuts.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>make-lp</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill make-lp" aria-label="Copy install command for make-lp" title="npx skills add hidao80/agent-skills --skill make-lp"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Builds a static, build-free landing page (docs/index.html) with light/dark themes, OGP, JSON-LD, a Twemoji favicon, and 6-language support via multilanguagejs.</span>
+                <span language="ja">ライト/ダークテーマ、OGP、JSON-LD、Twemoji ファビコン、multilanguagejs による 6 言語対応を備えた、ビルド不要の静的ランディングページ（docs/index.html）を作成します。</span>
+                <span language="zh">构建无需构建步骤的静态落地页（docs/index.html），支持明暗主题、OGP、JSON-LD、Twemoji 网站图标，并通过 multilanguagejs 支持 6 种语言。</span>
+                <span language="es">Crea una landing page estática sin compilación (docs/index.html) con temas claro/oscuro, OGP, JSON-LD, favicon de Twemoji y 6 idiomas mediante multilanguagejs.</span>
+                <span language="ru">Создаёт статичный лендинг без сборки (docs/index.html) со светлой и тёмной темами, OGP, JSON-LD, фавиконом Twemoji и поддержкой 6 языков через multilanguagejs.</span>
+                <span language="de">Erstellt eine statische Landingpage ohne Build-Schritt (docs/index.html) mit Hell-/Dunkelmodus, OGP, JSON-LD, Twemoji-Favicon und 6 Sprachen über multilanguagejs.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>make-social-preview</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill make-social-preview" aria-label="Copy install command for make-social-preview" title="npx skills add hidao80/agent-skills --skill make-social-preview"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Generates a 1280×640 social preview image (social-preview.svg plus PNG) with inline Twemoji vectors.</span>
+                <span language="ja">Twemoji ベクターをインラインで埋め込んだ 1280×640 の social preview 画像（social-preview.svg と PNG）を生成します。</span>
+                <span language="zh">生成内嵌 Twemoji 矢量的 1280×640 社交预览图（social-preview.svg 及 PNG）。</span>
+                <span language="es">Genera una imagen de vista previa social de 1280×640 (social-preview.svg y PNG) con vectores Twemoji integrados.</span>
+                <span language="ru">Генерирует превью для соцсетей размером 1280×640 (social-preview.svg и PNG) со встроенными векторами Twemoji.</span>
+                <span language="de">Erzeugt ein 1280×640-Social-Preview-Bild (social-preview.svg und PNG) mit eingebetteten Twemoji-Vektoren.</span>
+              </template>
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="card-title"><code>sbi-feedback</code></h3>
+            <button class="copy-btn card-copy" type="button" data-command="npx skills add hidao80/agent-skills --skill sbi-feedback" aria-label="Copy install command for sbi-feedback" title="npx skills add hidao80/agent-skills --skill sbi-feedback"></button>
+            <p>
+              <template type="language-group">
+                <span language="en">Turns a work report into structured, positive feedback using the SBI (Situation, Behavior, Impact) framework.</span>
+                <span language="ja">作業報告を SBI（状況・行動・影響）フレームワークで構造化された、ポジティブなフィードバックに変換します。</span>
+                <span language="zh">使用 SBI（情境、行为、影响）框架，将工作报告转化为结构化的正面反馈。</span>
+                <span language="es">Convierte un informe de trabajo en feedback positivo y estructurado con el marco SBI (Situación, Comportamiento, Impacto).</span>
+                <span language="ru">Превращает отчёт о работе в структурированную позитивную обратную связь по модели SBI (ситуация, поведение, влияние).</span>
+                <span language="de">Wandelt einen Arbeitsbericht mit dem SBI-Modell (Situation, Verhalten, Wirkung) in strukturiertes, positives Feedback um.</span>
+              </template>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="quick-start">
+      <div class="container">
+        <h2 class="section-title">
+          <template type="language-group">
+            <span language="en">Quick Start</span>
+            <span language="ja">クイックスタート</span>
+            <span language="zh">快速开始</span>
+            <span language="es">Inicio rápido</span>
+            <span language="ru">Быстрый старт</span>
+            <span language="de">Schnellstart</span>
+          </template>
+        </h2>
+        <ol class="steps">
+          <li>
+            <p>
+              <template type="language-group">
+                <span language="en">Install with the skills CLI (requires Node.js 22.20 or later). Skills are installed to the current project by default; add -g to make them available across projects.</span>
+                <span language="ja">skills CLI でインストールします（Node.js 22.20 以上が必要）。既定では現在のプロジェクトにインストールされ、-g を付けると全プロジェクトで利用できます。</span>
+                <span language="zh">使用 skills CLI 安装（需要 Node.js 22.20 或更高版本）。默认安装到当前项目；添加 -g 可在所有项目中使用。</span>
+                <span language="es">Instala con la CLI de skills (requiere Node.js 22.20 o superior). Por defecto se instalan en el proyecto actual; añade -g para usarlos en todos los proyectos.</span>
+                <span language="ru">Установите через CLI skills (требуется Node.js 22.20 или новее). По умолчанию навыки ставятся в текущий проект; добавьте -g, чтобы они были доступны во всех проектах.</span>
+                <span language="de">Installieren Sie mit der skills-CLI (erfordert Node.js 22.20 oder neuer). Standardmäßig wird ins aktuelle Projekt installiert; mit -g stehen die Skills projektübergreifend zur Verfügung.</span>
+              </template>
+            </p>
+            <div class="code-row">
+              <code>npx skills add hidao80/agent-skills</code>
+              <button class="copy-btn" type="button" aria-label="Copy command"></button>
+            </div>
+          </li>
+          <li>
+            <p>
+              <template type="language-group">
+                <span language="en">List available skills without installing.</span>
+                <span language="ja">インストールせずに利用可能なスキルを一覧表示します。</span>
+                <span language="zh">列出可用技能而不安装。</span>
+                <span language="es">Lista los skills disponibles sin instalarlos.</span>
+                <span language="ru">Покажите список доступных навыков без установки.</span>
+                <span language="de">Verfügbare Skills auflisten, ohne sie zu installieren.</span>
+              </template>
+            </p>
+            <div class="code-row">
+              <code>npx skills add hidao80/agent-skills --list</code>
+              <button class="copy-btn" type="button" aria-label="Copy command"></button>
+            </div>
+          </li>
+          <li>
+            <p>
+              <template type="language-group">
+                <span language="en">Install specific skills for Claude Code only.</span>
+                <span language="ja">特定のスキルを Claude Code 専用にインストールします。</span>
+                <span language="zh">仅为 Claude Code 安装指定技能。</span>
+                <span language="es">Instala skills concretos solo para Claude Code.</span>
+                <span language="ru">Установите выбранные навыки только для Claude Code.</span>
+                <span language="de">Bestimmte Skills nur für Claude Code installieren.</span>
+              </template>
+            </p>
+            <div class="code-row">
+              <code>npx skills add hidao80/agent-skills --skill commit-msg --skill code-analyze -a claude-code</code>
+              <button class="copy-btn" type="button" aria-label="Copy command"></button>
+            </div>
+          </li>
+          <li>
+            <p>
+              <template type="language-group">
+                <span language="en">Install all skills globally for Claude Code.</span>
+                <span language="ja">すべてのスキルを Claude Code 用にグローバルインストールします。</span>
+                <span language="zh">为 Claude Code 全局安装所有技能。</span>
+                <span language="es">Instala todos los skills de forma global para Claude Code.</span>
+                <span language="ru">Установите все навыки глобально для Claude Code.</span>
+                <span language="de">Alle Skills global für Claude Code installieren.</span>
+              </template>
+            </p>
+            <div class="code-row">
+              <code>npx skills add hidao80/agent-skills --skill '*' -g -a claude-code</code>
+              <button class="copy-btn" type="button" aria-label="Copy command"></button>
+            </div>
+          </li>
+        </ol>
+        <p class="note">
+          <template type="language-group">
+            <span language="en">Then ask the agent in natural language, e.g. "Suggest a commit message" or "Run a security audit", or invoke a skill directly with /&lt;skill-name&gt; (e.g. /commit-msg ja). Run npx skills update to update installed skills, or npx skills remove to remove them.</span>
+            <span language="ja">あとは「コミットメッセージを提案して」「セキュリティ監査を実行して」のように自然言語で依頼するか、/&lt;skill-name&gt;（例: /commit-msg ja）でスキルを直接呼び出します。更新は npx skills update、削除は npx skills remove で行います。</span>
+            <span language="zh">然后用自然语言向代理提出请求，例如“Suggest a commit message”或“Run a security audit”，或使用 /&lt;skill-name&gt;（例如 /commit-msg ja）直接调用技能。运行 npx skills update 更新已安装的技能，运行 npx skills remove 将其删除。</span>
+            <span language="es">Después, pide al agente en lenguaje natural, p. ej. "Suggest a commit message" o "Run a security audit", o invoca un skill directamente con /&lt;skill-name&gt; (p. ej. /commit-msg ja). Ejecuta npx skills update para actualizar los skills instalados o npx skills remove para eliminarlos.</span>
+            <span language="ru">Затем обратитесь к агенту на естественном языке, например «Suggest a commit message» или «Run a security audit», либо вызовите навык напрямую через /&lt;skill-name&gt; (например, /commit-msg ja). Для обновления выполните npx skills update, для удаления — npx skills remove.</span>
+            <span language="de">Bitten Sie den Agenten dann in natürlicher Sprache, z. B. „Suggest a commit message“ oder „Run a security audit“, oder rufen Sie einen Skill direkt mit /&lt;skill-name&gt; auf (z. B. /commit-msg ja). Mit npx skills update aktualisieren Sie installierte Skills, mit npx skills remove entfernen Sie sie.</span>
+          </template>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="tech-stack">
+      <div class="container">
+        <h2 class="section-title">
+          <template type="language-group">
+            <span language="en">Tech Stack</span>
+            <span language="ja">技術スタック</span>
+            <span language="zh">技术栈</span>
+            <span language="es">Stack tecnológico</span>
+            <span language="ru">Технологии</span>
+            <span language="de">Tech-Stack</span>
+          </template>
+        </h2>
+        <ul class="badge-list">
+          <li class="badge">Agent Skills</li>
+          <li class="badge">SKILL.md</li>
+          <li class="badge">YAML front matter</li>
+          <li class="badge">Markdown</li>
+          <li class="badge">Claude Code</li>
+          <li class="badge">skills CLI</li>
+          <li class="badge">MIT License</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 <a href="https://github.com/hidao80">hidao80</a> ·
+        <a href="https://github.com/hidao80/agent-skills/blob/main/LICENSE">
+          <template type="language-group">
+            <span language="en">Released under the MIT License.</span>
+            <span language="ja">MIT ライセンスで公開。</span>
+            <span language="zh">基于 MIT 许可证发布。</span>
+            <span language="es">Publicado bajo la licencia MIT.</span>
+            <span language="ru">Распространяется по лицензии MIT.</span>
+            <span language="de">Veröffentlicht unter der MIT-Lizenz.</span>
+          </template>
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
