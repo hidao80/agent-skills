@@ -28,7 +28,7 @@ Before writing anything, read the following:
 4. **Favicon** — Reference a Twemoji SVG that suits the project with `<link rel="icon">`.
 5. **Multilingual support via `multilanguagejs` (CDN, no build step)**:
    ```html
-   <script src="https://unpkg.com/multilanguagejs@2.0.1/dist/multilanguagejs.umd.cjs"></script>
+   <script src="https://unpkg.com/multilanguagejs@{LATEST_VERSION}/dist/multilanguagejs.umd.cjs" integrity="sha384-..." crossorigin="anonymous"></script>
    ```
    Wrap every element to be translated in `<template type="language-group">`, and inside it place one child element per language, each with a `language="xx"` attribute (not `lang`):
    ```html
@@ -50,8 +50,8 @@ Before writing anything, read the following:
 
    Detect the visitor's language from `navigator.language`, save the selected language in `localStorage`, and on load reapply it before falling back to browser detection.
 
-   **Required language set (always, regardless of what the app itself supports):** English (`en`), Japanese (`ja`), Chinese (`zh`), Spanish (`es`), Russian (`ru`), German (`de`) — at least 6 languages. This applies even if `src/locales/*.json` or the app's own `i18n.ts`/`i18n.js` covers only some of them (e.g., even for an `en`/`ja`-only app, make the landing page in 6 languages). If requested, you may add other languages to these 6.
-6. **Copy-to-clipboard buttons** — Give every install/run command shown in a `<code>` block a copy button with an inline SVG icon (never an emoji), with a checkmark confirmation state via `navigator.clipboard.writeText()`. For consistent layout, wrap the `<code>` and its button in a `.code-row` flex container.
+   **Required language set (always, regardless of what the app itself supports):** English (`en`), Japanese (`ja`), Chinese (`zh`), Spanish (`es`), Russian (`ru`), German (`de`) — at least 6 languages. This applies even if `src/locales/*.json` or the app's own `i18n.ts`/`i18n.js` covers only some of them (e.g., even for an `en`/`ja`-only app, make the landing page in 6 languages). If requested, you may add other languages to these 6. Write the copy in a polite register (e.g., です/ます form in Japanese).
+6. **Copy-to-clipboard buttons** — Give every install/run command shown in a `<code>` block a copy button with an inline SVG icon (never an emoji), with a checkmark confirmation state via `navigator.clipboard.writeText()`. For consistent layout, wrap the `<code>` and its button in a `.code-row` flex container. Place the button in the top-right corner of the code block area, layered in front of the content. Clicking the button copies the command to the clipboard and temporarily shows a checkmark.
 7. **Responsive** — Mobile-first. Do not cause horizontal scrolling on narrow viewports, except inside containers explicitly intended to scroll (e.g., a wide comparison table).
 8. **No build step** — Make the page work just by opening the HTML file or serving the static folder as-is, regardless of which bundler (Vite, etc.) the app itself uses. Keep `main.js` as readable source. Load it directly in the page with `<script src="main.js">`.
 9. **Semantic structure** — Structure these semantically: hero (heading, lead text, CTA, primary run command), screenshots (reuse existing repository/GitHub asset URLs if any), feature grid, quick-start/install commands, tech stack badges, footer.
